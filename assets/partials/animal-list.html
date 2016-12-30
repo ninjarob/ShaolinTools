@@ -1,0 +1,21 @@
+<div class="topcoat-navigation-bar">
+    <a ng-click="go('/tools')">
+        main
+    </a>
+    <div class="topcoat-navigation-bar__item center full">
+        <h1 class="topcoat-navigation-bar__title">Animal Techniques</h1>
+    </div>
+</div>
+<div class="topcoat-list__container scroller" style="top:138px;">
+    <ul class="topcoat-list list">
+        <li ng-repeat="animal in animals" class="topcoat-list__item">
+            <!--<a ng-click="go('/animals/' + animal.id)">-->
+                <p>{{animal.title}}</p>
+            <!--</a>-->
+        </li>
+    </ul>
+    <form>
+        <input type="text" ng-model="formAnimalText" ng-model-instant>
+        <button class="button" ng-click="add()">add</button>
+    </form>
+</div>
